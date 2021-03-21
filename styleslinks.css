@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+html,body{
+margin:0px;
+padding:0px;
+
+	background-color: #26004d;
+	background-image: url("bg-art6.png");
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+body{
+
+padding:0.75em;
+font-size:1.2em;
+font-family: 'Calligraffitti', cursive;
+font-weight:normal;
+font-style:normal;
+color: #8c8c8c;
+}
+hr{
+	
+	height: 0; 
+	border-top: 1px solid #8c8c8c;
+	border-bottom: 0px;
+	padding-top:0.5em;
+}
+.main-header h1{
+margin:5px;
+padding:1px;
+text-decoration:none;
+text-align:center;
+font-style:normal;
+font-weight: normal;
+font-family: 'Great Vibes', cursive;
+font-size: 6em;
+color:rgb(255,255,255,0.4) ;
+}
+h2{
+	font-family: 'Great Vibes', cursive;
+	font-size: 2.5em;
+	font-style:normal;
+	font-weight:normal;
+}
+h3{
+	font-weight: normal;
+	font-size: 1.3em;
+}
+a{
+	text-decoration: none;
+	color: #8c8c8c;
+}
+.main-nav ul{
+	margin: 0px;
+	
+}
+.main-nav li{
+	display: inline-block;
+	text-align:center;
+	padding: 0 11%;
+	border-bottom: 1px solid #8c8c8c;
+	padding-bottom: 1em;
+}
+.main-nav a{
+	text-decoration: none;
+	padding: 0.5em;
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color:rgb(255,255,255,0.4) ;
+}
+.main-nav a:hover{
+	background-color:rgba(255,255,255,0.3);
+}
+
+.footer {
+	text-decoration: none;
+	margin: 4px;
+	padding: 0px;
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color:rgb(255,255,255,0.4) ;
+}
+hr.style-1 {
+    margin:4px;
+	padding:0px;
+	overflow: visible;
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8c8c;
+    border-width: 1.5px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-1:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8c8c;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.container{
+max-width: 90%;	
+}
+button{
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.67em;
+	cursor: pointer;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 1.1em;
+    color:rgb(255,255,255,0.4) ;
+}
+button:hover{
+	background-color: rgb(255,255,255,0.15);
+}
+.row{
+	border-bottom: 0.07em  solid rgb(255,255,255,0.4) ;
+	padding-bottom: 4px;
+	margin-bottom: 1em;
+}
+.row:last-child{
+border-bottom: none;
+}
+.row-item{
+display: inline-block;
+padding-left: 7%;
+padding-right:7%;
+height:15%;
+width: 20%;
+}
+.row-btn{
+	
+	border-width: 3px 3px 3px 3px;
+	border-color: rgb(255,255,255,0.4);
+	height: 50px;
+	width: 300px;
+	padding:0px;
+	background-color:rgb(0,0,0,0.4);
+}
