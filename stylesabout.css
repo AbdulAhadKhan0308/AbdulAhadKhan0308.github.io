@@ -5,9 +5,7 @@ html,body{
 margin:0px;
 padding:0px;
 
-	background-color: #24248f;
 	background-image: url("bg-art7.jpg");
-	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-size:cover;
 }
