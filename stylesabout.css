@@ -7,6 +7,7 @@ body {
   padding: 0px;
 
   background-image: url("bg-art7.jpg");
+  /*background-color: rgb(189, 184, 209);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -16,7 +17,7 @@ body {
   font-family: "Calligraffitti", cursive;
   font-weight: normal;
   font-style: normal;
-  color: #8c8c8c;
+  color: #797373;
 }
 .hidden {
   display: none;
@@ -93,19 +94,40 @@ hr.style-1:before {
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
-#dialog1 {
+.modal {
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+  background-color: rgb(25, 24, 26);
+  z-index: 100;
   padding: 1%;
 }
-.dialog-content h1 {
-  display: inline-block;
+.modal__content h1 {
+  display: inline;
   margin-top: 2%;
   width: 95%;
 }
-.cross {
-  color: rgb(1, 8, 8);
+.modal__cross {
+  color: rgb(255, 255, 255, 0.4);
+  display: inline-block;
+  margin-left: 40%;
+  font-size: 2rem;
   font-weight: bold;
 }
-.cross:hover {
-  background-color: rgba(227, 186, 240, 0.719);
+.modal__cross:hover {
   cursor: pointer;
+}
+.about__container__header {
+  margin-bottom: 100px;
+}
+.about__container__content {
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+.content--hidden {
+  opacity: 0;
+}
+.content--show {
+  transform: translateY(-4rem);
+  transition-duration: 0.2s;
 }
