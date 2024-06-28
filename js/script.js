@@ -1,144 +1,131 @@
-//var socket = io();
-//io.connect('http://localhost:5000');
-
+// Connect to the WebSocket server
 var socket = io.connect("http://localhost:5000");
 
+// DOM element references
 var zachImage = document.getElementById("zach-image");
+var navOnScroll = document.getElementById("nav-on-scroll");
+var mobileNav = document.getElementById("mobile-nav");
+var contactMePane = document.getElementById("contact-me-pane");
+
 var clickCount = 0;
 var lockImage = false;
 var navPopulated = false;
 
-
+// Initial check and setup
 checkScrollPosition();
-$("#nav-on-scroll").addClass("nav-top-hidden");
-            $("#nav-on-scroll").removeClass("nav-top-visible")
-         
-            function socketTest()
-            {
+navOnScroll.classList.add("nav-top-hidden");
+navOnScroll.classList.remove("nav-top-visible");
 
-            }
-$(window).scroll(function() {
-    var scrollY = $(window).scrollTop();
-    if(scrollY >= 200) {
-      if(!navPopulated)
-      {
-        //Show NavBar on scroll 
-        $("#nav-on-scroll").removeClass("nav-top-hidden");
-        $("#nav-on-scroll").addClass("nav-top-visible")
-        navPopulated = true;
-      }
+// Scroll event handler to toggle navigation visibility based on scroll position
+window.addEventListener("scroll", function () {
+  var scrollY = window.scrollY;
+  if (scrollY >= 200) {
+    if (!navPopulated) {
+      console.log("Show Nav");
+      navOnScroll.classList.remove("nav-top-hidden");
+      navOnScroll.classList.add("nav-top-visible");
+      navPopulated = true;
     }
-    else if(scrollY)
-    {
-        if(navPopulated)
-        {
-            console.log("Hide Nav");
-            $("#nav-on-scroll").addClass("nav-top-hidden");
-            $("#nav-on-scroll").removeClass("nav-top-visible")
-            navPopulated = false;
-        }
+  } else {
+    if (navPopulated) {
+      console.log("Hide Nav");
+      navOnScroll.classList.add("nav-top-hidden");
+      navOnScroll.classList.remove("nav-top-visible");
+      navPopulated = false;
     }
-  });
-
-
-
-  function projectRetired()
-  {
-    swal("This project is retired!", "Unfortunately, this project is no longer available. Don't worry, it may come back some day. In the meantime, why not check out some of my other projects?", "info");
   }
+});
 
-  function socketTest()
-  {
-    console.log("SOCKET TEST");
-    console.log(socket);
-    socket.emit('remote-action', {socketActionType: "socketTestingAction", userPlatform: "mobile"});
+function projectRetired() {
+  swal(
+    "This project is retired!",
+    "Unfortunately, this project is no longer available. Don't worry, it may come back some day. In the meantime, why not check out some of my other projects?",
+    "info"
+  );
 }
 
-  
-function openMobileNav()
-{
-    $("#mobile-nav").removeClass("offscreen-nav-hidden");
-    document.body.style.overflow = 'hidden';
+function socketTest() {
+  console.log("SOCKET TEST");
+  console.log(socket);
+  socket.emit("remote-action", {
+    socketActionType: "socketTestingAction",
+    userPlatform: "mobile",
+  });
 }
 
-function closeMobileNav()
-{
-    $("#mobile-nav").addClass("offscreen-nav-hidden");
-    document.body.style.overflow = 'initial';
+function openMobileNav() {
+  mobileNav.classList.remove("offscreen-nav-hidden");
+  document.body.style.overflow = "hidden";
 }
 
-function checkScrollPosition()
-{
-    var currentURL = window.location.href;
-    currentURL = currentURL.split("#")[1];
-    if(currentURL == "contact") {
-        toggleContactMe('show');
-    }
-
-    var scrollY = $(window).scrollTop();
-    if(scrollY >= 200) {
-      if(!navPopulated)
-      {
-        //Show NavBar on scroll 
-        console.log("Populate nav!");
-        $("#nav-on-scroll").removeClass("nav-top-hidden");
-        $("#nav-on-scroll").addClass("nav-top-visible")
-        navPopulated = true;
-      }
-    }
-    else if(scrollY)
-    {
-        if(navPopulated)
-        {
-            console.log("Hide Nav");
-            $("#nav-on-scroll").addClass("nav-top-hidden");
-            $("#nav-on-scroll").removeClass("nav-top-visible")
-            navPopulated = false;
-        }
-    }
+function closeMobileNav() {
+  mobileNav.classList.add("offscreen-nav-hidden");
+  document.body.style.overflow = "initial";
 }
 
-function openContact()
-{
-    closeMobileNav();
+function checkScrollPosition() {
+  var currentURL = window.location.href.split("#")[1];
+  if (currentURL == "contact") {
     toggleContactMe("show");
-}
-
-function toggleContactMe(action)
-{
-    if(action == "show")
-    {
-        $("#contact-me-pane").removeClass("contact-me-inactive");
-        $("#contact-me-pane").addClass("contact-me-active");
+  }
+  var scrollY = window.scrollY;
+  if (scrollY >= 200) {
+    if (!navPopulated) {
+      console.log("Populate nav!");
+      navOnScroll.classList.remove("nav-top-hidden");
+      navOnScroll.classList.add("nav-top-visible");
+      navPopulated = true;
     }
-    else if(action == "hide")
-    {
-        $("#contact-me-pane").addClass("contact-me-inactive");
-        $("#contact-me-pane").removeClass("contact-me-active");
+  } else {
+    if (navPopulated) {
+      console.log("Hide Nav");
+      navOnScroll.classList.add("nav-top-hidden");
+      navOnScroll.classList.remove("nav-top-visible");
+      navPopulated = false;
     }
+  }
 }
 
-function zachShades()
-{
-    if(!lockImage)
-    {
-        zachImage.src = "img/zach-shades.png";
-    }
+function openContact() {
+  closeMobileNav();
+  toggleContactMe("show");
 }
 
-function scrollToSection(section)
-{   
-    var elmnt = document.getElementById(section);
-    elmnt.scrollIntoView();
-    closeMobileNav();
+function toggleContactMe(action) {
+  if (action == "show") {
+    contactMePane.classList.remove("contact-me-inactive");
+    contactMePane.classList.add("contact-me-active");
+  } else if (action == "hide") {
+    contactMePane.classList.add("contact-me-inactive");
+    contactMePane.classList.remove("contact-me-active");
+  }
 }
 
-function zachNormal()
-{
-    if(!lockImage)
-    {
-        zachImage.src = "img/zach.png";
-    }
+function zachShades() {
+  if (!lockImage) {
+    zachImage.src = "img/zach-shades.png";
+  }
 }
 
-function iterateClickCount(){clickCount++;if(clickCount==1){zachShades();} if(clickCount == 420){zachImage.src = "img/zach-shades-stupid-secret.png"; lockImage = true;}}
+function scrollToSection(section) {
+  var elmnt = document.getElementById(section);
+  elmnt.scrollIntoView();
+  closeMobileNav();
+}
+
+function zachNormal() {
+  if (!lockImage) {
+    zachImage.src = "img/zach.png";
+  }
+}
+
+function iterateClickCount() {
+  clickCount++;
+  if (clickCount == 1) {
+    zachShades();
+  }
+  if (clickCount == 420) {
+    zachImage.src = "img/zach-shades-stupid-secret.png";
+    lockImage = true;
+  }
+}
