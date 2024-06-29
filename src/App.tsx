@@ -245,7 +245,7 @@ export const App: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-4 md:p-20 bg-gray-900 text-gray-50">
+      {/* <div className="p-4 md:p-20 bg-gray-900 text-gray-50">
         <div className="sm:w-12/12 animate__animated animate__fadeIn delay2 text-center md:w-12/12 col-centered">
           <div className="text-4xl w-full md:text-5xl lg:text-6xl pt-10 md:pt-0 font-extrabold">
             Featured Work
@@ -304,6 +304,298 @@ export const App: React.FC = () => {
                 </div>
               </a>
             </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div
+        id="about"
+        className="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900"
+      >
+        <div className="p-4 pt-8 text-4xl md:text-6xl font-extrabold">
+          About
+        </div>
+        <div className="p-4 text-2xl md:text-4xl w-10/12 font-extrabold">
+          Here you'll find details about my educational background and work
+          experience.
+        </div>
+        {/* <ol className="p-4 sm:w-12/12 md:w-12/12 col-centered">
+          <li className="mt-10 mb-10 ms-6">
+            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+              <svg
+                className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </span>
+            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              Flowbite Application UI v2.0.0{" "}
+              <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
+                Latest
+              </span>
+            </h3>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              Released on January 13th, 2022
+            </time>
+            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+              Get access to over 20+ pages including a dashboard layout, charts,
+              kanban board, calendar, and pre-order E-commerce & Marketing
+              pages.
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+              <svg
+                className="w-3.5 h-3.5 me-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+              </svg>{" "}
+              Download ZIP
+            </a>
+          </li>
+          <li className="mb-10 ms-6">
+            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+              <svg
+                className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </span>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              Flowbite Figma v1.3.0
+            </h3>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              Released on December 7th, 2021
+            </time>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              All of the pages and components are first designed in Figma and we
+              keep a parity between the two versions even as we update the
+              project.
+            </p>
+          </li>
+          <li className="ms-6">
+            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+              <svg
+                className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </span>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              Flowbite Library v1.2.2
+            </h3>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              Released on December 2nd, 2021
+            </time>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+              Get started with dozens of web components and interactive elements
+              built on top of Tailwind CSS.
+            </p>
+          </li>
+        </ol> */}
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 flex flex-col p-4">
+            <a
+              href="https://www.daily.co/blog/easy-emdr-transforms-trauma-therapy-delivery-with-daily/"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow h-100 hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Daily.co Feature{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Easy EMDR transforms trauma therapy delivery with Daily.
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 p-4">
+            <a
+              href="https://www.macalester.edu/news/2022/09/summer-at-a-startup/?fbclid=IwAR3R8lezNX3b-4tw96iZ8owB-maX64nnD_cjFM24j2nUZ0m772tOGgq7sjA"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow h-100 hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Summer at a Startup{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Adding features for therapists with our talented intern.
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 p-4">
+            <a
+              href="https://www.bizjournals.com/twincities/inno/stories/inno-insights/2019/09/18/minne-innos-2019-inno-under-25.html"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Top Rising Entrepreneur [2019]{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Recognition for Work on Easy EMDR.
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 flex flex-col p-4">
+            <a
+              href="https://www.bizjournals.com/twincities/inno/stories/inno-events/2020/11/19/minne-inno-presents-its-2020-inno-under-25.html"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg h-100 shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Top Rising Entrepreneur [2020]{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Easy EMDR's Second Year Included!
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 p-4">
+            <a
+              href="https://storiesatmac.wordpress.com/2019/04/09/hes-helping-mental-health-through-coding-zachary-jordan/"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Stories at Mac{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Helping mental health through programming.
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 p-4">
+            <a
+              href="https://www.macalester.edu/news/2020/08/change-in-plans/"
+              target="_blank"
+              className="kill-link-style"
+            >
+              <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
+                <div className="font-extrabold inherit text-3xl md:text-4xl">
+                  Change in Plans{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="inline-block h-8 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="text-white font-bold italic mt-2 text-2xl">
+                  Article Writing about Easy EMDR's Work During COVID-19.
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -713,239 +1005,6 @@ export const App: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* <div
-        id="media"
-        className="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900"
-      >
-        <div className="sm:w-12/12 md:w-12/12 col-centered">
-          <div className="p-4 text-4xl md:text-6xl pt-12 md:pt-0 font-extrabold">
-            To add
-          </div>
-          <div className="p-4 text-2xl md:text-4xl w-10/12 font-extrabold">
-            Content to add
-          </div>
-
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 flex flex-col p-4">
-              <a
-                href="https://www.startribune.com/macalester-senior-makes-eye-movement-therapy-accessible-and-affordable-with-an-app/573372791/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow h-100 hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Star Tribune Feature
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    On making eye movement therapy more accessible.
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 flex flex-col md:col-span-6 p-4">
-              <a
-                href="https://www.daily.co/blog/easy-emdr-transforms-trauma-therapy-delivery-with-daily/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow h-100 hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Daily.co Feature
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Easy EMDR transforms trauma therapy delivery with Daily.
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 p-4">
-              <a
-                href="https://www.macalester.edu/news/2022/09/summer-at-a-startup/?fbclid=IwAR3R8lezNX3b-4tw96iZ8owB-maX64nnD_cjFM24j2nUZ0m772tOGgq7sjA"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow h-100 hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Summer at a Startup
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Adding features for therapists with our talented intern.
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 p-4">
-              <a
-                href="https://www.bizjournals.com/twincities/inno/stories/inno-insights/2019/09/18/minne-innos-2019-inno-under-25.html"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Top Rising Entrepreneur [2019]
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Recognition for Work on Easy EMDR.
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 flex flex-col md:col-span-6 p-4">
-              <a
-                href="https://www.bizjournals.com/twincities/inno/stories/inno-events/2020/11/19/minne-inno-presents-its-2020-inno-under-25.html"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg h-100 shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Top Rising Entrepreneur [2020]
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Easy EMDR's Second Year Included!
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 p-4">
-              <a
-                href="https://storiesatmac.wordpress.com/2019/04/09/hes-helping-mental-health-through-coding-Abdul-jordan/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Stories at Mac
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Helping mental health through programming.
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 p-4">
-              <a
-                href="https://www.macalester.edu/news/2020/08/change-in-plans/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="move-up-slightly p-6 md:p-10 rounded-lg shadow hover:shadow-xl cursor-pointer hover:bg-green-400 text-green-400 hover:text-gray-900 bg-gray-900 text-gray-50">
-                  <div className="font-extrabold inherit text-3xl md:text-4xl">
-                    Change in Plans
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="inline-block h-8 w-10"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="4"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                  <div className="text-white font-bold italic mt-2 text-2xl">
-                    Article Writing about Easy EMDR's Work During COVID-19.
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="w-full bg-gray-200 text-center block p-4">
         <span className="font-extrabold text-gray-900 text-xl">
           <div className="mt-1">

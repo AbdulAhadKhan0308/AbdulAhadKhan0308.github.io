@@ -3,7 +3,12 @@ about -> put resume
 check how contact me works
 check whether other guy name not coming anywhere
 implement some throttling func for navigation/IntersectionObserver API  
-make prpject more react usage
+make project more react usage
 add photo attribution (the icon that was taken from some site)
 
 https://www.zachjordan.io/
+
+
+----------
+less priority
+intern project breaks on small screen size 
