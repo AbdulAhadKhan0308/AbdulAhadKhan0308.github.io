@@ -314,34 +314,35 @@ export const App: React.FC = () => {
       >
         <div className="sm:w-12/12 md:w-12/12 col-centered">
           <div className="p-4 pt-8 text-4xl md:text-6xl font-extrabold">
-            My Projects
+            My Links
           </div>
           <div className="p-4 text-2xl md:text-4xl w-10/12 font-extrabold">
-            I love to create things, and I'm always working on something new!
-            You can view some of my favorite projects below.
+            Explore the links below to learn more about my coding skills and
+            professional work.
           </div>
 
           <div className="grid grid-cols-12">
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.boycottbuddy.app/"
+                href="https://codeforces.com/profile/AbdulAhadKhan"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/boycott-buddy.png"
-                      alt="Boycott Buddy Logo"
+                      src="img/codeforces.png"
+                      alt="Codeforces Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Boycott Buddy
+                      Codeforces
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Consumer Transparency Resource
+                      <span style={{ color: "#0000ff" }}>Expert </span>rated on
+                      Codeforces
                     </div>
                   </div>
                 </div>
@@ -350,24 +351,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.fucknestle.art/"
+                href="https://leetcode.com/u/AbdulAhadKhan030801/"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/finger.png"
-                      alt="Fuck Nestle Logo"
+                      src="img/leetcode.ico"
+                      alt="Leetcode Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      F*ck Nestlé
+                      Leetcode
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      All about Nestlé
+                      2000+ Leetcode rating
                     </div>
                   </div>
                 </div>
@@ -376,24 +377,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.animalalliancepledge.org/"
+                href="https://www.codechef.com/users/abdul030801"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/logo-aap.png"
-                      alt="Animal Alliance Pledge Logo"
+                      src="img/codechef.ico"
+                      alt="Codechef Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Animal Alliance Pledge
+                      Codechef
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Animal Activism Support
+                      5 ⭐ rated on Codechef
                     </div>
                   </div>
                 </div>
@@ -402,24 +403,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.collabspot.io/"
+                href="https://www.hackerearth.com/@AbdulAhadKhan"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/collab.jpg"
-                      alt="Collab Spot Logo"
+                      src="img/hackerearth.png"
+                      alt="Hackerearth Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Collab Spot
+                      Hackerearth
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Collaborative Website Iteration
+                      1900+ Contest Rating
                     </div>
                   </div>
                 </div>
@@ -428,24 +429,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.supportbodilyautonomy.com/"
+                href="https://atcoder.jp/users/AbdulAhadKhan"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/love.png"
-                      alt="Bodily Autonomy Logo"
+                      src="img/atcoder.png"
+                      alt="Atcoder Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Support Bodily Autonomy
+                      Atcoder
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Reproductive Freedom Resources
+                      1000+ rating
                     </div>
                   </div>
                 </div>
@@ -454,24 +455,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://www.easy-emdr.com/"
+                href="https://www.hackerrank.com/profile/aahad6674"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/easy-logo.png"
-                      alt="Easy EMDR Logo"
+                      src="img/hackerrank.png"
+                      alt="Hackerrank Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Easy EMDR
+                      Hackerrank
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Simplifying EMDR Telehealth
+                      5 ⭐ Java and SQL Badges
                     </div>
                   </div>
                 </div>
@@ -480,24 +481,24 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="https://safesubstance.com/"
+                href="https://github.com/AbdulAhadKhan0308/"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/corrosive.png"
-                      alt="Safe Substance Logo"
+                      src="img/github.svg"
+                      alt="Github Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Safe Substance
+                      Github Profile
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Interactive Harm Reduction
+                      Checkout my projects
                     </div>
                   </div>
                 </div>
@@ -506,236 +507,28 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <a
-                href="Sea/thesea.html"
+                href="https://my.newtonschool.co/user/aahad6674"
                 target="_blank"
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
                   <div className="w-full text-center">
                     <img
-                      src="img/wave.png"
-                      alt="Mariana Trench Visualization"
+                      src="img/newtoncoding.ico"
+                      alt="Newton Coding Logo"
                       className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
                     />
                   </div>
                   <div className="mt-2">
                     <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      The Sea
+                      Newton Coding
                     </span>
                     <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Exploring the Mariana Trench
+                      2100+ Contest Rating
                     </div>
                   </div>
                 </div>
               </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <a
-                href="rich/index.html"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="w-full text-center">
-                    <img
-                      src="img/money.png"
-                      alt="Rich Are Really Rich Logo"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Rich Are Really Rich
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Visualizing Extreme Wealth
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <a
-                href="https://apps.apple.com/us/app/easy-emdr/id1594213288?ign-mpt=uo%3D2"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="w-full text-center">
-                    <img
-                      src="img/easy-logo.png"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Easy EMDR App
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      A modern EMDR app
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <a
-                href="https://www.thecureitproject.com/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="w-full text-center">
-                    <img
-                      src="img/cureit.png"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      The Cure It Project
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Streamlined Cancer Education
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <a
-                href="https://www.easy-emdr.com/oldtool.html"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="w-full text-center">
-                    <img
-                      src="img/eye.jpg"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-3xl font-extrabold text-gray-900">
-                      Easy EMDR Classic
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Free EMDR BLS
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <span
-                onClick={() => projectRetired()}
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="w-full text-center">
-                    <img
-                      src="img/contextualize.png"
-                      alt="Contextualize Me Logo"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                      Contextualize Me
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Effective Altruism Resources
-                    </div>
-                  </div>
-                </div>
-              </span>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <a
-                href="https://www.schaumburgflyingclub.org/"
-                target="_blank"
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="absolute top-2 left-2 text-md font-extrabold rounded-lg p-1 bg-gray-900 text-gray-50">
-                    Contract Job
-                  </div>
-                  <div className="w-full text-center">
-                    <img
-                      src="img/plane.png"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-3xl font-extrabold text-gray-900">
-                      Flying Club
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Website for Aviation Fans
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <span
-                onClick={() => projectRetired()}
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="absolute top-2 left-2 text-md font-extrabold rounded-lg p-1 bg-gray-900 text-gray-50">
-                    Contract Job
-                  </div>
-                  <div className="w-full text-center">
-                    <img
-                      src="img/blood-orange.png"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-3xl font-extrabold text-gray-900">
-                      Blood Orange
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Website for Author
-                    </div>
-                  </div>
-                </div>
-              </span>
-            </div>
-
-            <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
-              <span
-                onClick={() => projectRetired()}
-                className="kill-link-style"
-              >
-                <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-                  <div className="absolute top-2 left-2 text-md font-extrabold rounded-lg p-1 bg-gray-900 text-gray-50">
-                    Contract Job
-                  </div>
-                  <div className="w-full text-center">
-                    <img
-                      src="img/laptop.png"
-                      className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <span className="text-3xl font-extrabold text-gray-900">
-                      Got/It Software
-                    </span>
-                    <div className="mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">
-                      Website for Startup
-                    </div>
-                  </div>
-                </div>
-              </span>
             </div>
           </div>
         </div>
@@ -914,11 +707,10 @@ export const App: React.FC = () => {
       >
         <div className="sm:w-12/12 md:w-12/12 col-centered">
           <div className="p-4 text-4xl md:text-6xl pt-12 md:pt-0 font-extrabold">
-            Links
+            To add
           </div>
           <div className="p-4 text-2xl md:text-4xl w-10/12 font-extrabold">
-            Explore the links below to learn more about my coding skills and
-            professional work.
+            Content to add
           </div>
 
           <div className="grid grid-cols-12">
