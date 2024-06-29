@@ -13,18 +13,18 @@ export function projectInProgress() {
   );
 }
 
-export function openMobileNav() {
-  const mobileNav = document.getElementById("mobile-nav");
-  console.log("mobileNav", mobileNav);
-  mobileNav?.classList.remove("offscreen-nav-hidden");
-  document.body.style.overflow = "hidden";
-}
+// export function openMobileNav() {
+//   const mobileNav = document.getElementById("mobile-nav");
+//   console.log("mobileNav", mobileNav);
+//   mobileNav?.classList.remove("offscreen-nav-hidden");
+//   document.body.style.overflow = "hidden";
+// }
 
-export function closeMobileNav() {
-  const mobileNav = document.getElementById("mobile-nav");
-  mobileNav?.classList.add("offscreen-nav-hidden");
-  document.body.style.overflow = "initial";
-}
+// export function closeMobileNav() {
+//   const mobileNav = document.getElementById("mobile-nav");
+//   mobileNav?.classList.add("offscreen-nav-hidden");
+//   document.body.style.overflow = "initial";
+// }
 
 export function toggleNavOnScroll() {
   const navOnScroll = document.getElementById("nav-on-scroll");
@@ -66,7 +66,7 @@ export function loadPic(arg: boolean) {
 
   if (abdImage) {
     console.log("before setting source");
-    !arg ? (abdImage.src = "img/abd.png") : (abdImage.src = "img/abd-dark.png");
+    !arg ? (abdImage.src = "img/abd.svg") : (abdImage.src = "img/abd-dark.svg");
   }
 }
 
@@ -74,7 +74,7 @@ export function scrollToSection(section: string) {
   console.log("scrollToSection", section);
   var elmnt = document.getElementById(section);
   elmnt?.scrollIntoView();
-  closeMobileNav();
+  // closeMobileNav();
 }
 
 export const iterateClickCount = () => loadPic(!!(++clickCount % 2));
