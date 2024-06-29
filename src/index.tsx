@@ -2,6 +2,6 @@ import { App } from "./App";
 import ReactDOM from "react-dom";
 import React from "react";
 
-console.log("app init");
+console.log("check app init4");
 
 ReactDOM.render(<App />, document.getElementById("app"));

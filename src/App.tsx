@@ -1,11 +1,35 @@
 import * as React from "react";
+import {
+  toggleContactMe,
+  iterateClickCount,
+  projectRetired,
+  toggleNavOnScroll,
+} from "./utilityFuncs";
 
 export const App: React.FC = () => {
-  const noop = (..._arg: any[]) => {
-    return () => {
-      return;
-    };
+  //   const noop = (..._arg: any[]) => {
+  //     return () => {
+  //       return;
+  //     };
+  //   };
+  const handleContactMe = () => {
+    let currentURL = window.location.href;
+    currentURL = currentURL.split("#")[1];
+    console.log("currentURL", currentURL);
+    if (currentURL == "contact") {
+      toggleContactMe("show");
+    }
   };
+  const handleScroll = () => toggleNavOnScroll();
+
+  React.useEffect(() => {
+    window.onload = () => handleContactMe();
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -19,7 +43,7 @@ export const App: React.FC = () => {
         <div className="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
           <a href="#top" className="kill-link-style xl:mr-6">
             <span className="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
-              ZJ
+              AK
             </span>
           </a>
           <a
@@ -38,10 +62,10 @@ export const App: React.FC = () => {
             href="#media"
             className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
           >
-            Media
+            Links
           </a>
           <span
-            onClick={noop("toggleContactMe", "show")}
+            onClick={() => toggleContactMe("show")}
             className="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold"
           >
             Contact Me
@@ -53,7 +77,7 @@ export const App: React.FC = () => {
         style={{
           left: 0,
           right: 0,
-          overflowY: "auto", //important not needed as react applies styles inline so already highest priority
+          overflowY: "auto", //'!important' not needed as react applies styles inline so already highest priority
           marginLeft: "auto",
           marginRight: "auto",
           maxHeight: "83%",
@@ -69,9 +93,9 @@ export const App: React.FC = () => {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2.620"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2.620"
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             />
           </svg>
@@ -82,16 +106,16 @@ export const App: React.FC = () => {
         <div className="absolute right-6 top-4 md:right-16 md:top-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            onClick={noop("toggleContactMe", "hide")}
+            onClick={() => toggleContactMe("hide")}
             className="cursor-pointer h-14 w-14"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2.420"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2.420"
               d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
@@ -144,109 +168,15 @@ export const App: React.FC = () => {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   className="inline-block"
-                  stroke-linejoin="round"
-                  stroke-width="3.420"
+                  strokeLinejoin="round"
+                  strokeWidth="3.420"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
             </button>
           </form>
-        </div>
-      </div>
-
-      <nav className="block bg-white shadow md:hidden">
-        <div
-          style={{ zIndex: 999 }} // !important not needed
-          className="fixed top-10 right-6"
-        >
-          <svg
-            onClick={noop("openMobileNav", "")}
-            xmlns="http://www.w3.org/2000/svg"
-            className="duration-200 p-1.5 bg-gray-100 hover:bg-gray-200 h-12 w-12 rounded-full"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2.620"
-              d="M4 6h16M4 12h8m-8 6h16"
-            />
-          </svg>
-        </div>
-      </nav>
-
-      <div
-        id="mobile-nav"
-        style={{ zIndex: 999 }} //important not needed
-        className="fixed block md:hidden duration-300 ease bg-gray-100 offscreen-nav offscreen-nav-hidden"
-      >
-        <div className="absolute top-10 right-4">
-          <svg
-            onClick={noop("closeMobileNav", "")}
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2.620"
-              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </div>
-
-        <div className="relative w-12/12 text-center">
-          <span
-            onClick={noop("scrollToSection", "top")}
-            className="inline-block relative top-11 col-center rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold"
-          >
-            ZJ
-          </span>
-        </div>
-
-        <div className="mt-16 text-center col-centered">
-          <div className="text-4xl font-extrabold">
-            <span
-              onClick={noop("scrollToSection", "projects")}
-              className="underline--magical"
-            >
-              Projects
-            </span>
-          </div>
-
-          <div className="text-4xl mt-4 font-extrabold">
-            <span
-              onClick={noop("scrollToSection", "extras")}
-              className="underline--magical"
-            >
-              Extras
-            </span>
-          </div>
-
-          <div className="text-4xl mt-4 font-extrabold">
-            <span
-              onClick={noop("scrollToSection", "media")}
-              className="underline--magical"
-            >
-              Media
-            </span>
-          </div>
-
-          <div className="text-3xl mt-8 relative font-extrabold">
-            <span
-              onClick={noop("openContact", "")}
-              className="border-4 px-4 py-2 border-gray-900 rounded-md"
-            >
-              Contact Me
-            </span>
-          </div>
         </div>
       </div>
 
@@ -257,7 +187,7 @@ export const App: React.FC = () => {
           <span className="hidden md:block lg:block">
             <a href="#top" className="kill-link-style">
               <span className="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
-                ZJ
+                AK
               </span>
             </a>
 
@@ -277,10 +207,10 @@ export const App: React.FC = () => {
               href="#media"
               className="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold"
             >
-              Media
+              Links
             </a>
             <span
-              onClick={noop("toggleContactMe", "show")}
+              onClick={() => toggleContactMe("show")}
               className="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold"
             >
               Contact Me
@@ -290,7 +220,7 @@ export const App: React.FC = () => {
           <span className="block md:hidden lg:hidden">
             <a href="#top" className="kill-link-style">
               <span className="inline-block hidden w-full text-center animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
-                ZJ
+                AK
               </span>
             </a>
           </span>
@@ -299,8 +229,8 @@ export const App: React.FC = () => {
               <img
                 id="zach-image"
                 style={{ borderRadius: "100%" }}
-                onClick={noop("iterateClickCount", "")}
-                src="img/zach.png"
+                onClick={() => iterateClickCount()}
+                src="img/abd.png"
                 alt="Photo of Abdul Ahad Khan"
                 className="cursor-pointer xl:mt-10 inline-block animate__animated animate__fadeIn delay2 border-gray-900 duration-300 ease hover:border-green-400 shadow-md border-8 h-80 w-80 md:w-96 md:h-96 inline-block"
               />
@@ -703,7 +633,7 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <span
-                onClick={noop("projectRetired", "")}
+                onClick={() => projectRetired()}
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
@@ -756,7 +686,7 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <span
-                onClick={noop("projectRetired", "")}
+                onClick={() => projectRetired()}
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
@@ -783,7 +713,7 @@ export const App: React.FC = () => {
 
             <div className="col-span-12 md:col-span-6 lg:col-span-4 p-4">
               <span
-                onClick={noop("projectRetired", "")}
+                onClick={() => projectRetired()}
                 className="kill-link-style"
               >
                 <div className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
@@ -806,28 +736,6 @@ export const App: React.FC = () => {
                   </div>
                 </div>
               </span>
-            </div>
-
-            <div className="col-span-12 hidden md:col-span-6 lg:col-span-4 p-4">
-              <div
-                onClick={noop("showRetiredProjects", "")}
-                className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg"
-              >
-                <div className="w-full text-center">
-                  <img
-                    src="img/retired-icon.jpeg"
-                    className="col-centered rounded-md mt-2 mb-1 h-14 w-14"
-                  />
-                </div>
-                <div className="mt-2">
-                  <span className="text-3xl font-extrabold text-gray-900">
-                    Retired Projects
-                  </span>
-                  <div className="mt-1 text-gray-900 font-extrabold text-2xl">
-                    Some Fun Older Projects
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1006,11 +914,11 @@ export const App: React.FC = () => {
       >
         <div className="sm:w-12/12 md:w-12/12 col-centered">
           <div className="p-4 text-4xl md:text-6xl pt-12 md:pt-0 font-extrabold">
-            Media
+            Links
           </div>
           <div className="p-4 text-2xl md:text-4xl w-10/12 font-extrabold">
-            I try to create projects that address social problems. Here's some
-            media that has been written about projects I've worked on.
+            Explore the links below to learn more about my coding skills and
+            professional work.
           </div>
 
           <div className="grid grid-cols-12">
@@ -1031,9 +939,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1062,9 +970,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1093,9 +1001,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1124,9 +1032,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1155,9 +1063,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1186,9 +1094,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
@@ -1217,9 +1125,9 @@ export const App: React.FC = () => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="4"
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>

@@ -2,22 +2,10 @@
 declare const io: any;
 declare const swal: any;
 
-// Connect to the WebSocket server
-const socket = io.connect("http://localhost:5000");
-
-// DOM element references
-const zachImage = document.getElementById(
-  "zach-image"
-) as HTMLImageElement | null;
-const navOnScroll = document.getElementById("nav-on-scroll");
-const mobileNav = document.getElementById("mobile-nav");
-const contactMePane = document.getElementById("contact-me-pane");
-
 let clickCount = 0;
-let lockImage = false;
 let navPopulated = false;
 
-function projectRetired() {
+export function projectRetired() {
   swal(
     "This project is retired!",
     "Unfortunately, this project is no longer available. Don't worry, it may come back some day. In the meantime, why not check out some of my other projects?",
@@ -25,31 +13,23 @@ function projectRetired() {
   );
 }
 
-function socketTest() {
-  console.log("SOCKET TEST");
-  console.log(socket);
-  socket.emit("remote-action", {
-    socketActionType: "socketTestingAction",
-    userPlatform: "mobile",
-  });
-}
-
-function openMobileNav() {
+export function openMobileNav() {
+  const mobileNav = document.getElementById("mobile-nav");
+  console.log("mobileNav", mobileNav);
   mobileNav?.classList.remove("offscreen-nav-hidden");
   document.body.style.overflow = "hidden";
 }
 
-function closeMobileNav() {
+export function closeMobileNav() {
+  const mobileNav = document.getElementById("mobile-nav");
   mobileNav?.classList.add("offscreen-nav-hidden");
   document.body.style.overflow = "initial";
 }
 
-function checkScrollPosition() {
-  var currentURL = window.location.href.split("#")[1];
-  if (currentURL == "contact") {
-    toggleContactMe("show");
-  }
-  var scrollY = window.scrollY;
+export function toggleNavOnScroll() {
+  const navOnScroll = document.getElementById("nav-on-scroll");
+  const scrollY = window.scrollY;
+  console.log("scrollY", scrollY);
   if (scrollY >= 200) {
     if (!navPopulated) {
       console.log("Populate nav!");
@@ -67,12 +47,8 @@ function checkScrollPosition() {
   }
 }
 
-function openContact() {
-  closeMobileNav();
-  toggleContactMe("show");
-}
-
-function toggleContactMe(action: "show" | "hide") {
+export function toggleContactMe(action: "show" | "hide") {
+  const contactMePane = document.getElementById("contact-me-pane");
   if (action == "show") {
     contactMePane?.classList.remove("contact-me-inactive");
     contactMePane?.classList.add("contact-me-active");
@@ -82,31 +58,23 @@ function toggleContactMe(action: "show" | "hide") {
   }
 }
 
-function zachShades() {
-  if (!lockImage && zachImage) {
-    zachImage.src = "img/zach-shades.png";
+export function loadPic(arg: boolean) {
+  const abdImage = document.getElementById(
+    "zach-image"
+  ) as HTMLImageElement | null;
+  console.log("abdImage", abdImage);
+
+  if (abdImage) {
+    console.log("before setting source");
+    !arg ? (abdImage.src = "img/abd.png") : (abdImage.src = "img/abd-dark.png");
   }
 }
 
-function scrollToSection(section: string) {
+export function scrollToSection(section: string) {
+  console.log("scrollToSection", section);
   var elmnt = document.getElementById(section);
   elmnt?.scrollIntoView();
   closeMobileNav();
 }
 
-function zachNormal() {
-  if (!lockImage && zachImage) {
-    zachImage.src = "img/zach.png";
-  }
-}
-
-function iterateClickCount() {
-  clickCount++;
-  if (clickCount == 1) {
-    zachShades();
-  }
-  if (clickCount == 420 && zachImage) {
-    zachImage.src = "img/zach-shades-stupid-secret.png";
-    lockImage = true;
-  }
-}
+export const iterateClickCount = () => loadPic(!!(++clickCount % 2));

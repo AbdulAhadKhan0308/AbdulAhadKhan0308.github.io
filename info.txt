@@ -2,3 +2,7 @@ about me, projects, links, work on these
 about -> put resume
 check how contact me works
 check whether other guy name not coming anywhere
+implement some throttling func for navigation/IntersectionObserver API  
+add photo attribution (the icon that was taken from some site)
+
+https://www.zachjordan.io/
