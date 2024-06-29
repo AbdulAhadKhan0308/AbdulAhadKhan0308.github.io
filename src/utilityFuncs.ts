@@ -5,10 +5,10 @@ declare const swal: any;
 let clickCount = 0;
 let navPopulated = false;
 
-export function projectRetired() {
+export function projectInProgress() {
   swal(
-    "This project is retired!",
-    "Unfortunately, this project is no longer available. Don't worry, it may come back some day. In the meantime, why not check out some of my other projects?",
+    "This project is in progress!",
+    "This project is still being worked on and a link to it would soon be available. In the meantime, do check out some of my other projects.",
     "info"
   );
 }
