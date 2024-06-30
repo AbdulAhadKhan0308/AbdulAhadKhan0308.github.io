@@ -2,11 +2,12 @@ check how contact me works
 check whether other guy name not coming anywhere
 implement some throttling func for navigation/IntersectionObserver API  
 make project more react usage
-
+deploy
 https://www.zachjordan.io/
 
 
 ----------
 less priority
-intern project breaks on small screen size 
+------------
+"intern project" breaks on small screen size 
 make scroller come always
