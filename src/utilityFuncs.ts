@@ -5,24 +5,24 @@
 let navPopulated = false;
 
 export function toggleNavOnScroll() {
-  const navOnScroll = document.getElementById("nav-on-scroll");
-  const scrollY = window.scrollY;
-  console.log("scrollY", scrollY);
-  if (scrollY >= 200) {
-    if (!navPopulated) {
-      console.log("Populate nav!");
-      navOnScroll?.classList.remove("nav-top-hidden");
-      navOnScroll?.classList.add("nav-top-visible");
-      navPopulated = true;
-    }
-  } else {
-    if (navPopulated) {
-      console.log("Hide Nav");
-      navOnScroll?.classList.add("nav-top-hidden");
-      navOnScroll?.classList.remove("nav-top-visible");
-      navPopulated = false;
-    }
-  }
+  // const navOnScroll = document.getElementById("nav-on-scroll");
+  // const scrollY = window.scrollY;
+  // console.log("scrollY", scrollY);
+  // if (scrollY >= 200) {
+  //   if (!navPopulated) {
+  //     console.log("Populate nav!");
+  //     navOnScroll?.classList.remove("nav-top-hidden");
+  //     navOnScroll?.classList.add("nav-top-visible");
+  //     navPopulated = true;
+  //   }
+  // } else {
+  //   if (navPopulated) {
+  //     console.log("Hide Nav");
+  //     navOnScroll?.classList.add("nav-top-hidden");
+  //     navOnScroll?.classList.remove("nav-top-visible");
+  //     navPopulated = false;
+  //   }
+  // }
 }
 
 // export function toggleContactMe(action: "show" | "hide") {

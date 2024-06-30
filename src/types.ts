@@ -1,4 +1,5 @@
 export type MobileNavProps = {
+  navVisible: boolean;
   contactMeVisible: boolean;
   setContactMeVisible: React.Dispatch<React.SetStateAction<boolean>>;
 };
