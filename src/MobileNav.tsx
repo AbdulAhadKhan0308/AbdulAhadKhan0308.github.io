@@ -2,6 +2,7 @@ import * as React from "react";
 import { MobileNavProps } from "./types";
 
 export const MobileNav: React.FC<MobileNavProps> = ({
+  navVisible,
   contactMeVisible,
   setContactMeVisible,
 }) => {
@@ -10,45 +11,47 @@ export const MobileNav: React.FC<MobileNavProps> = ({
 
   return (
     <>
-      <nav
-        id="nav-on-scroll"
-        style={{
-          background: "rgba(53, 211, 153, 0.975)",
-        }}
-        className="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40"
-      >
-        <div className="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
-          <a href="#top" className="kill-link-style xl:mr-6">
-            <span className="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
-              AK
+      {navVisible && (
+        <nav
+          id="nav-on-scroll"
+          style={{
+            background: "rgba(53, 211, 153, 0.975)",
+          }}
+          className="fixed hidden md:block lg:block duration-300 ease shadow top-0 left-0 w-full p-4 text-gray-900 z-40"
+        >
+          <div className="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="#top" className="kill-link-style xl:mr-6">
+              <span className="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AK
+              </span>
+            </a>
+            <a
+              href="#about"
+              className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
+            >
+              About
+            </a>
+            <a
+              href="#projects"
+              className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
+            >
+              Projects
+            </a>
+            <a
+              href="#links"
+              className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
+            >
+              Links
+            </a>
+            <span
+              onClick={createHandleToggle(true)}
+              className="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold"
+            >
+              Contact Me
             </span>
-          </a>
-          <a
-            href="#about"
-            className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
-          >
-            Projects
-          </a>
-          <a
-            href="#links"
-            className="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
-          >
-            Links
-          </a>
-          <span
-            onClick={createHandleToggle(true)}
-            className="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold"
-          >
-            Contact Me
-          </span>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      )}
       {contactMeVisible && (
         <div
           id="contact-me-pane"

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { toggleNavOnScroll } from "./utilityFuncs";
 import { MobileNav } from "./MobileNav";
 import { IntroContainer } from "./IntroContainer";
 import { About } from "./About";
@@ -9,6 +8,18 @@ import { Links } from "./Links";
 export const App: React.FC = () => {
   const [contactMeVisible, setContactMeVisible] =
     React.useState<boolean>(false);
+  const [navVisible, setNavVisible] = React.useState<boolean>(false);
+
+  const toggleNavOnScroll = React.useCallback(() => {
+    const scrollY = window?.scrollY;
+    if (scrollY >= 200) {
+      console.log("Populate nav!", navVisible);
+      setNavVisible(true);
+    } else {
+      console.log("Hide nav!", navVisible);
+      setNavVisible(false);
+    }
+  }, [navVisible]);
 
   const handleContactMe = () => {
     let currentURL = window.location.href;
@@ -31,6 +42,7 @@ export const App: React.FC = () => {
   return (
     <>
       <MobileNav
+        navVisible={navVisible}
         contactMeVisible={contactMeVisible}
         setContactMeVisible={setContactMeVisible}
       />
