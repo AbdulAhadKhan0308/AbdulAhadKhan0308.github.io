@@ -1,12 +1,14 @@
-check how contact me works
-check whether other guy name not coming anywhere
-implement some throttling func for navigation/IntersectionObserver API  
-make project more react usage
-deploy
+-about section hover
+-check how contact me works
+-check whether other guy name not coming anywhere
+-implement some throttling func for navigation/IntersectionObserver API  
+-doubt that came up (see branch master-doubt last commit, basically an event handler 
+always received false for a state variable in its closure)
+-deploy
+-----------
 https://www.zachjordan.io/
-
-
 ----------
+
 less priority
 ------------
 "intern project" breaks on small screen size 

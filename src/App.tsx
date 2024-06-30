@@ -4,31 +4,32 @@ import { IntroContainer } from "./IntroContainer";
 import { About } from "./About";
 import { Projects } from "./Projects";
 import { Links } from "./Links";
+import { throttle } from "lodash";
 
 export const App: React.FC = () => {
   const [contactMeVisible, setContactMeVisible] =
     React.useState<boolean>(false);
   const [navVisible, setNavVisible] = React.useState<boolean>(false);
 
-  const toggleNavOnScroll = React.useCallback(() => {
+  const toggleNavOnScroll = () => {
     const scrollY = window?.scrollY;
     if (scrollY >= 200) {
-      console.log("Populate nav!", navVisible);
+      console.log("Populate nav!");
       setNavVisible(true);
     } else {
-      console.log("Hide nav!", navVisible);
+      console.log("Hide nav!");
       setNavVisible(false);
     }
-  }, [navVisible]);
+  };
 
-  const handleContactMe = () => {
+  const handleContactMe = throttle(() => {
     let currentURL = window.location.href;
     currentURL = currentURL.split("#")[1];
     console.log("currentURL", currentURL);
     if (currentURL == "contact") {
       setContactMeVisible(true);
     }
-  };
+  }, 100);
   const handleScroll = () => toggleNavOnScroll();
 
   React.useEffect(() => {
