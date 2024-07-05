@@ -50,7 +50,7 @@ export const IntroContainer: React.FC<IntroContainerProps> = ({
           <div className="mt-20">
             <div className="w-full text-center">
               <img
-                id="zach-image"
+                id="abd-image"
                 style={{ borderRadius: "100%" }}
                 onClick={handleImgSrc}
                 src={imgState ? "img/abd.svg" : "img/abd-dark.svg"}

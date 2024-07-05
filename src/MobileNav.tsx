@@ -107,7 +107,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
             <div className="text-gray-50 text-xl md:text-2xl font-extrabold">
               Your Name
             </div>
-            <form action="https://formspree.io/f/mvolpedn" method="POST">
+            <form action="https://formspree.io/f/xanwypap" method="POST">
               <input
                 type="text"
                 required
