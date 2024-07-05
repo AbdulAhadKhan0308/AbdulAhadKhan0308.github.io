@@ -1,8 +1,3 @@
-check how contact me works
-check whether other guy name not coming anywhere
-implement some throttling func for navigation/IntersectionObserver API  
-make project more react usage
-deploy
 https://www.zachjordan.io/
 
 

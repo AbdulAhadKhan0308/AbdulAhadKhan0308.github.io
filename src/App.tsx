@@ -8,13 +8,17 @@ import { Links } from "./Links";
 export const App: React.FC = () => {
   const [contactMeVisible, setContactMeVisible] =
     React.useState<boolean>(false);
+  const [arr, setArr] = React.useState<number[]>([1]);
   const [navVisible, setNavVisible] = React.useState<boolean>(false);
-  let someVal = 10;
-  console.log("navVisible in App", navVisible);
 
+  const oldFunc = () => {
+    console.log("old arr", arr);
+  };
+  const newFunc = () => {
+    console.log("new arr", arr);
+  };
   const toggleNavOnScroll = React.useCallback(() => {
     const scrollY = window?.scrollY;
-    console.log("someVal", someVal);
     console.log("scrollY", scrollY);
     console.log("navVisible", navVisible);
     console.log("contactMeVisible", contactMeVisible);
@@ -41,8 +45,12 @@ export const App: React.FC = () => {
   };
   const handleScroll = () => toggleNavOnScroll();
 
+  React.useEffect(() => newFunc());
   React.useEffect(() => {
-    someVal++;
+    const btn = document.getElementById("btn-test");
+    btn?.addEventListener("click", oldFunc);
+  }, []);
+  React.useEffect(() => {
     window.onload = () => handleContactMe();
   }, []);
   React.useEffect(() => {
@@ -52,6 +60,8 @@ export const App: React.FC = () => {
 
   return (
     <>
+      <button id="btn-test">"old arr"</button>
+      <button onClick={() => setArr([1, 1])}>"set state"</button>
       <MobileNav
         navVisible={navVisible}
         contactMeVisible={contactMeVisible}
