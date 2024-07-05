@@ -1,0 +1,8 @@
+-----------
+https://www.zachjordan.io/
+----------
+
+less priority
+------------
+"intern project" breaks on small screen size 
+make scroller come always
