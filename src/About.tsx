@@ -100,7 +100,7 @@ export const About: React.FC = () => {
                     </div>
                   </div>
                   <div className="text-white font-bold italic mt-2 text-2xl">
-                    Software Engineer
+                    Software Engineer (SWE)
                   </div>
                   <div className="text-white font-bold italic mt-2 text-2xl">
                     &#8226; Developed a framework to mock the WebSocket protocol
