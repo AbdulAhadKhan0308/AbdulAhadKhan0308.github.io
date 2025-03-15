@@ -1,7 +1,5 @@
 import * as React from "react";
-
-// declarations
-declare const swal: any;
+import swal from 'sweetalert';
 
 export const Projects: React.FC = () => {
   const handleWipProjectClick = (e: React.SyntheticEvent) => {
