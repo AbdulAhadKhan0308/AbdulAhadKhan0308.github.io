@@ -1,3 +1,4 @@
+import { track } from "../analytics";
 import { education, experience, site } from "../data";
 import { Section } from "../components/Section";
 import { TimelineEntry } from "../components/TimelineEntry";
@@ -13,7 +14,12 @@ export function About() {
       intro={
         <>
           My work experience and education. You can also{" "}
-          <a href={site.resumeUrl} {...external} className={textLink}>
+          <a
+            href={site.resumeUrl}
+            {...external}
+            onClick={() => track("resume-click", { location: "about" })}
+            className={textLink}
+          >
             view my resume
           </a>
           .

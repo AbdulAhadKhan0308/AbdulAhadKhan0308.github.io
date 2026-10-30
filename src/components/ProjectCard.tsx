@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { track } from "../analytics";
 import type { Project } from "../types";
 import { Card } from "./Card";
 import { ArrowUpRightIcon } from "./icons";
@@ -18,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const meta = href ? hostOf(href) : source;
 
   return (
-    <Card href={href} className="flex flex-col p-5">
+    <Card href={href} onClick={() => track("project-click", { project: title })} className="flex flex-col p-5">
       <div className="flex items-start justify-between gap-4">
         <h3 className="font-semibold text-zinc-900">{title}</h3>
         {href && (

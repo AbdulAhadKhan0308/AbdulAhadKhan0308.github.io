@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { track, type ContactSource } from "./analytics";
 import { ContactDialog } from "./components/ContactDialog";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -9,10 +10,13 @@ import { Projects } from "./sections/Projects";
 
 export function App() {
   const [contactOpen, setContactOpen] = useState(false);
-  const openContact = () => setContactOpen(true);
+  const openContact = (source: ContactSource) => {
+    setContactOpen(true);
+    track("contact-open", { source });
+  };
 
   useEffect(() => {
-    if (window.location.hash === "#contact") setContactOpen(true);
+    if (window.location.hash === "#contact") openContact("link");
   }, []);
 
   return (

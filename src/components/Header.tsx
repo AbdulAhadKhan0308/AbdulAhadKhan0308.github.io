@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { ContactSource } from "../analytics";
 import { site } from "../data";
 import { CloseIcon, MenuIcon } from "./icons";
 import { Monogram } from "./Monogram";
@@ -10,7 +11,7 @@ const navItems = [
   { href: "#links", label: "Profiles" },
 ];
 
-export function Header({ onContact }: { onContact: () => void }) {
+export function Header({ onContact }: { onContact: (source: ContactSource) => void }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export function Header({ onContact }: { onContact: () => void }) {
 
   const openContact = () => {
     setMenuOpen(false);
-    onContact();
+    onContact("menu");
   };
 
   return (
@@ -48,7 +49,7 @@ export function Header({ onContact }: { onContact: () => void }) {
               {item.label}
             </a>
           ))}
-          <button type="button" onClick={onContact} className={`ml-3 ${primaryButton} py-2`}>
+          <button type="button" onClick={() => onContact("header")} className={`ml-3 ${primaryButton} py-2`}>
             Contact
           </button>
         </nav>

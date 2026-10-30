@@ -44,15 +44,15 @@ Most of this was done as part of the item 4 rewrite.
 ## 5. Logging and error reporting
 
 - [x] Remove the remaining debug `console.log` in [index.tsx](./src/index.tsx) (the scroll and hover ones went away with the rewrite)
-- [ ] Small logger that's silent in production builds
-- [ ] Catch JavaScript errors (a React error boundary + `window.onerror`)
-- [ ] Privacy-friendly analytics (GoatCounter, Plausible or Cloudflare Web Analytics) for resume clicks, outbound links and contact submissions
-- [ ] Send the contact form in the background with `fetch` and show success/failure inline instead of redirecting to Formspree
+- [x] Show a fallback instead of a blank page if rendering crashes ([ErrorBoundary.tsx](./src/components/ErrorBoundary.tsx))
+- [x] Privacy-friendly analytics: Umami Cloud (free plan) with click events for resume, GitHub, projects, profiles and the contact form ([analytics.ts](./src/analytics.ts))
+- [x] Send the contact form in the background with `fetch` and show success/failure inline instead of redirecting to Formspree
 
 ## Quick fixes
 
 - [x] Message box placeholder said "Enter email"
 - [x] Update the meta description ("learning web frontend and backend")
-- [ ] Add Open Graph preview tags so shared links show a title and image
-- [ ] Shrink `img/icon.jpg` (488 KB favicon) and `img/mnnit.png` (526 KB, shown at 28 px)
+- [x] Add Open Graph preview tags so shared links show a title and image ([og-image.png](./img/og-image.png))
+- [x] Replace the star favicon (488 KB JPG) with the AK monogram ([favicon.png](./img/favicon.png))
+- [ ] After deploying, check the link preview with LinkedIn's Post Inspector
 - [x] Delete the unused `.*-demo` CSS rules (their images never existed) and remove `url: false` from [webpack.config.js](./webpack.config.js); `css/style.css` is gone entirely

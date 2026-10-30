@@ -66,6 +66,10 @@ module.exports = (_env, argv) => {
     ],
     optimization: {
       minimizer: ['...', new CssMinimizerPlugin()],
+      // HtmlWebpackPlugin already minifies index.html. Webpack's own HTML pass
+      // would also strip attribute quotes, which some link-preview crawlers
+      // reading the og: tags handle poorly.
+      minimizeOptions: { html: false },
     },
     devServer: {
       static: false,

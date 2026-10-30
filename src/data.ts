@@ -8,7 +8,7 @@ export const site = {
   location: "Hyderabad, India",
   intro: "Discover more about my work, education and projects.",
   resumeUrl:
-    "https://drive.google.com/file/d/1Af4SBWUwkF1w63W4QLxcJdSI8ps41sNx/view",
+    "https://drive.google.com/file/d/1jjzGTka4mqrqeOnaDVI4mV5fyrNNnu2I/view?usp=sharing",
   githubUrl: "https://github.com/AbdulAhadKhan0308",
   contactFormAction: "https://formspree.io/f/xanwypap",
 };
@@ -91,9 +91,10 @@ export const projects: Project[] = [
     href: "https://github.com/AbdulAhadKhan0308/Inventory-Application",
   },
   {
-    title: "MP3 Player",
-    description: "An MP3 player written in Java.",
-    href: "https://github.com/AbdulAhadKhan0308/MP3-Player",
+    title: "AutoTrader",
+    description:
+      "A pipeline that scrapes market data and stock prices, runs a set of trading strategies to decide which trades to take, and places the trades automatically.",
+    tag: "In progress",
   },
   {
     title: "Mocking WebSocket Protocol in Playwright",
