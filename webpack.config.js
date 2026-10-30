@@ -28,8 +28,7 @@ module.exports = (_env, argv) => {
           test: /\.css$/,
           use: [
             MiniCssExtractPlugin.loader,
-            // img/ is copied as-is to dist/img, so url() paths stay unchanged.
-            { loader: 'css-loader', options: { url: false, importLoaders: 1 } },
+            { loader: 'css-loader', options: { importLoaders: 1 } },
             'postcss-loader',
           ],
         },
@@ -37,6 +36,9 @@ module.exports = (_env, argv) => {
     },
     output: {
       filename: isProduction ? 'js/[name].[contenthash:8].js' : 'js/[name].js',
+      assetModuleFilename: isProduction
+        ? 'assets/[name].[contenthash:8][ext]'
+        : 'assets/[name][ext]',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
     },

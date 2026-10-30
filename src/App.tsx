@@ -1,57 +1,31 @@
-import * as React from "react";
-import { MobileNav } from "./MobileNav";
-import { IntroContainer } from "./IntroContainer";
-import { About } from "./About";
-import { Projects } from "./Projects";
-import { Links } from "./Links";
-import { throttle } from "lodash";
+import { useEffect, useState } from "react";
+import { ContactDialog } from "./components/ContactDialog";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { About } from "./sections/About";
+import { Profiles } from "./sections/Profiles";
+import { Projects } from "./sections/Projects";
 
-export const App: React.FC = () => {
-  const [contactMeVisible, setContactMeVisible] =
-    React.useState<boolean>(false);
-  const [navVisible, setNavVisible] = React.useState<boolean>(false);
+export function App() {
+  const [contactOpen, setContactOpen] = useState(false);
+  const openContact = () => setContactOpen(true);
 
-  const toggleNavOnScroll = () => {
-    const scrollY = window?.scrollY;
-    if (scrollY >= 200) {
-      console.log("Populate nav!");
-      setNavVisible(true);
-    } else {
-      console.log("Hide nav!");
-      setNavVisible(false);
-    }
-  };
-
-  const handleContactMe = throttle(() => {
-    let currentURL = window.location.href;
-    currentURL = currentURL.split("#")[1];
-    console.log("currentURL", currentURL);
-    if (currentURL == "contact") {
-      setContactMeVisible(true);
-    }
-  }, 100);
-  const handleScroll = () => toggleNavOnScroll();
-
-  React.useEffect(() => {
-    window.onload = () => handleContactMe();
-  }, []);
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  useEffect(() => {
+    if (window.location.hash === "#contact") setContactOpen(true);
   }, []);
 
   return (
     <>
-      <MobileNav
-        navVisible={navVisible}
-        contactMeVisible={contactMeVisible}
-        setContactMeVisible={setContactMeVisible}
-      />
-      <div className="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
-      <IntroContainer setContactMeVisible={setContactMeVisible} />
-      <About />
-      <Projects />
-      <Links />
+      <Header onContact={openContact} />
+      <main>
+        <Hero onContact={openContact} />
+        <About />
+        <Projects />
+        <Profiles />
+      </main>
+      <Footer />
+      <ContactDialog open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
   );
-};
+}
