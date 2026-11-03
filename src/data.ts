@@ -10,6 +10,7 @@ export const site = {
   resumeUrl:
     "https://drive.google.com/file/d/1jjzGTka4mqrqeOnaDVI4mV5fyrNNnu2I/view?usp=sharing",
   githubUrl: "https://github.com/AbdulAhadKhan0308",
+  toptalUrl: "https://www.toptal.com/developers/resume/abdul-ahad-khan#lEO5J0",
   contactFormAction: "https://formspree.io/f/xanwypap",
 };
 

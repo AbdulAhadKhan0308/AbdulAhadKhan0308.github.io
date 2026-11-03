@@ -1,6 +1,7 @@
 export type AnalyticsEvent =
   | "resume-click"
   | "github-click"
+  | "toptal-click"
   | "project-click"
   | "profile-click"
   | "contact-open"

@@ -1,5 +1,6 @@
+import { track } from "../analytics";
 import { site } from "../data";
-import { focusRing } from "./styles";
+import { external, focusRing } from "./styles";
 
 export function Footer() {
   return (
@@ -8,9 +9,22 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {site.name}
         </p>
-        <a href="#top" className={`rounded-md transition hover:text-zinc-900 ${focusRing}`}>
-          Back to top ↑
-        </a>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <a
+            href={site.toptalUrl}
+            {...external}
+            onClick={() => track("toptal-click", { location: "footer" })}
+            className={`rounded-md transition hover:text-zinc-900 ${focusRing}`}
+          >
+            Available on Toptal
+          </a>
+          <a
+            href="#top"
+            className={`rounded-md transition hover:text-zinc-900 ${focusRing}`}
+          >
+            Back to top ↑
+          </a>
+        </div>
       </div>
     </footer>
   );
